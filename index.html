@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuário</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <img src="https://via.placeholder.com/150" alt="Imagem do Usuário">
+        <h1 id="nomee">Nome: </h1>
+        <input type="text" id ='nome' placeholder="Seu nome aqui"> <button id="botaomeupau" onclick="nome()">Confirmar</button>
+        <p id="idade">Idade: 0</p>
+        <p id="dinheiro" >Dinheiro: R$ 0</p>
+        <div id="janela" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+        padding: 20px; background-color: white; border: 2px solid #333; border-radius: 10px; text-align: center;">
+            
+            <h2>Escolha uma opção:</h2>
+            <button onclick="trafico()">Trafico de Drogas</button>
+            <button onclick="alert('Botão 2 clicado')">Botão 2</button>
+            <button onclick="alert('Botão 3 clicado')">Botão 3</button>
+            <button onclick="alert('Botão 4 clicado')">Botão 4</button>
+            <button onclick="alert('Botão 5 clicado')">Botão 5</button>
+            <button onclick="alert('Botão 6 clicado')">Botão 6</button>
+
+        </div>
+        <div style="display: flex; justify-content: center; gap: 10px;">
+            <button onclick="passarAno()" id="passarAninho">Passar Ano</button>
+            <button onclick="trampar()" id="trabalhar">Trabalhar</button>
+            <button onclick="outros()" id="outros">Outros</button>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
