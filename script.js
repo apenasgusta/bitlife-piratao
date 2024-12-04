@@ -99,7 +99,7 @@ function trafico(){
         alert('voce taficou cimegripe e ganhou R$10')
         adicionarDinheiro(10);
         dinheiroElemento.textContent = `Dinheiro: R$ ${dinheiroTotal}`;
-    } elseif (eventosAleatoriosTrafico == 5){
+    } else if (eventosAleatoriosTrafico == 5) {
         alert('Voce Morreu')
         mortePersonagem();
     }

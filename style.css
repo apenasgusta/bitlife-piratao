@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    background-image: url('/img/background.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+body h1 {
+    color: white;
+}
+
+
+/* Container principal */
+.container-tudo {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.container-horizonte {
+    display: flex;
+    flex-direction: column; 
+    padding: 20px; 
+    justify-content: flex-start; 
+    align-items: flex-start;
+    height: 400px;
+    width: 80%;
+    border-radius: 10px;
+    margin: 0 auto;
+    background: linear-gradient(#262433, #262433)
+    padding-box, linear-gradient(45deg,#e056fd, #48bdfb) border-box;
+    border: 5px solid transparent;
+}
+
+.container-horizonte h2 {
+    color: white;
+    margin: 10px;
+    font-size: 20px;
+    text-align: left;  
+    margin-top: 0; 
+}
+
+/* Imagem do jogador */
+.jogador {
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Título principal */
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilo do input de nome */
+#nome {
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 250px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #48bdfb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e056fd;
+}
+
+/* Estilo das informações de idade e dinheiro */
+#idade, #dinheiro {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Janela de escolha */
+#janela {
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+#janela h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#janela button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+/* Estilo para os botões de ações */
+#passarAninho, #trabalhar, #outros {
+    width: 150px;
+    margin: 10px;
+}
+
+/* Disposição dos botões principais */
+div[style*="display: flex"] {
+    margin-top: 10px;
+}

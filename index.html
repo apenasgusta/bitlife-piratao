@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Perfil de Usuário</title>
 </head>
 <body>
+
+    <h1>Bit Life Piratex</h1>
+
+<main class = "container-tudo">
     <div style="text-align: center;">
-        <img src="img/jogador.jpeg" alt="Imagem do Usuário">
+        <img src="img/jogador.jpeg" alt="Imagem do Usuário" class="jogador">
         <h1 id="nomee">Nome: </h1>
         <input type="text" id ='nome' placeholder="Seu nome aqui"> <button id="botaomeupau" onclick="nome()">Confirmar</button>
         <p id="idade">Idade: 0</p>
@@ -22,8 +27,17 @@
             <button onclick="alert('Botão 4 clicado')">Botão 4</button>
             <button onclick="alert('Botão 5 clicado')">Botão 5</button>
             <button onclick="alert('Botão 6 clicado')">Botão 6</button>
+            <button class="fechar-trabalho" onclick="fecharTrabalho()">Fechar</button>
 
         </div>
+</main>
+
+
+<div class="container-horizonte">
+    <h2 id="horizonte-eventos"> Voce adquiriu zuka vírus</h2>
+</div>
+
+
         <div style="display: flex; justify-content: center; gap: 10px;">
             <button onclick="passarAno()" id="passarAninho">Passar Ano</button>
             <button onclick="trampar()" id="trabalhar">Trabalhar</button>
