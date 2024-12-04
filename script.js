@@ -108,6 +108,6 @@ function trafico(){
 
 function menorAprendiz(){
     if (idadeReal < 16){
-
+//gustavo gosta de piroca mole e preta
     }
 }
