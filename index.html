@@ -18,11 +18,11 @@
         <p id="idade">Idade: 0</p>
         <p id="dinheiro" >Dinheiro: R$ 0</p>
         <div id="janela" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-        padding: 20px; background-color: white; border: 2px solid #333; border-radius: 10px; text-align: center;">
+        padding: 20px; background-color: rgb(0, 0, 0); border: 2px solid #333; border-radius: 10px; text-align: center;">
             
-            <h2>Escolha uma opção:</h2>
+            <h2 id = "dinheiroJanela">Dinheiro: </h2>
             <button onclick="trafico()">Trafico de Drogas</button>
-            <button onclick="alert('Botão 2 clicado')">Botão 2</button>
+            <button onclick="menorAprendiz()">Menor Aprendiz</button>
             <button onclick="alert('Botão 3 clicado')">Botão 3</button>
             <button onclick="alert('Botão 4 clicado')">Botão 4</button>
             <button onclick="alert('Botão 5 clicado')">Botão 5</button>
@@ -34,7 +34,7 @@
 
 
 <div class="container-horizonte">
-    <h2 id="horizonte-eventos"> Voce adquiriu zuka vírus</h2>
+    <h2 id="horizonte-eventos">Você Nasceu</h2>
 </div>
 
 
@@ -42,6 +42,7 @@
             <button onclick="passarAno()" id="passarAninho">Passar Ano</button>
             <button onclick="trampar()" id="trabalhar">Trabalhar</button>
             <button onclick="outros()" id="outros">Outros</button>
+            <button onclick="limparChat()" id="limparOChat">Limpar o Chat</button>
         </div>
     </div>
     <script src="script.js" defer></script>

@@ -120,7 +120,7 @@ button:hover {
 
 
 /* Estilo para os botões de ações */
-#passarAninho, #trabalhar, #outros {
+#passarAninho, #trabalhar, #outros, #limparOChat {
     width: 150px;
     margin: 10px;
 }
