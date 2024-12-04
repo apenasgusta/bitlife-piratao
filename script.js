@@ -120,7 +120,7 @@ function limparChat(){
     acontecimento.innerHTML = `<h2 id="horizonte-eventos"></h2>`
 }
 
-function trafico(){
+/*function trafico(){
     let eventosAleatoriosTrafico = parseInt(Math.random() * 5 + 1);
     console.log(eventosAleatoriosTrafico);
     if (eventosAleatoriosTrafico == 1){
@@ -139,7 +139,7 @@ function trafico(){
         mortePersonagem();
     }
     
-}
+} */
 
 function menorAprendiz(){
     if (idadeReal > 16){
