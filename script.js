@@ -39,8 +39,11 @@ function mortePersonagem(){
     dinheiroTotal = 0;
     const dinheiroElemento = document.getElementById("dinheiro");
     dinheiroElemento.textContent = `Dinheiro: R$ ${dinheiroTotal}`;
+    document.getElementById('dinheiroJanela').textContent = 'Dinheiro: ';
     document.getElementById('nome').style.display='inline';
     document.getElementById('botaomeupau').style.display='inline';
+    document.getElementById('janela').style.display='none';
+    document.getElementById('janela-trafico').style.display='none';
     acontecimentoFun('VOCE MORREU! Digite seu nome novamente e continue o jogo');
 }
 
@@ -120,32 +123,3 @@ function limparChat(){
     acontecimento.innerHTML = `<h2 id="horizonte-eventos"></h2>`
 }
 
-/*function trafico(){
-    let eventosAleatoriosTrafico = parseInt(Math.random() * 5 + 1);
-    console.log(eventosAleatoriosTrafico);
-    if (eventosAleatoriosTrafico == 1){
-        acontecimentoFun('Voce traficou cocaina e ganhou R$1000');
-        adicionarDinheiro(1000);
-    } else if (eventosAleatoriosTrafico == 2){
-        acontecimentoFun('voce traficou maconha e ganhou R$500')
-        adicionarDinheiro(500);
-    } else if (eventosAleatoriosTrafico == 3){
-        acontecimentoFun('voce traficou metafetamina e ganhou R$200')
-        adicionarDinheiro(200);
-    } else if (eventosAleatoriosTrafico == 4){
-        acontecimentoFun('voce taficou cimegripe e ganhou R$50')
-        adicionarDinheiro(50);
-    } else if (eventosAleatoriosTrafico == 5) {
-        mortePersonagem();
-    }
-    
-} */
-
-function menorAprendiz(){
-    if (idadeReal > 16){
-        adicionarDinheiro(500);
-    } else if (idadeReal < 16) {
-        adicionarDinheiro(50);
-     }
-
-}
