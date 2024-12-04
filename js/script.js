@@ -5,6 +5,7 @@ let idadeMaxima = parseInt(Math.random() * 3 + 1);
 
 //variaveis padrao
 
+
 function inicioGame(){
     document.getElementById('idade').style.display='none';
     document.getElementById('dinheiro').style.display='none';
@@ -38,6 +39,7 @@ function removerDinheiro(valor){
 
 
 function mortePersonagem(){
+    let causa;
     inicioGame();
     document.getElementById('nomee').innerHTML = 'Nome: ';
     document.getElementById('janela').style.display='none'
@@ -51,7 +53,7 @@ function mortePersonagem(){
     document.getElementById('botaomeupau').style.display='inline';
     document.getElementById('janela').style.display='none';
     document.getElementById('janela-trafico').style.display='none';
-    acontecimentoFun('VOCE MORREU! Digite seu nome novamente e continue o jogo');
+    acontecimentoFun(causa.textContent + 'VOCE MORREU! Digite seu nome novamente e continue o jogo');
 }
 
 let textoInserido;
@@ -111,7 +113,7 @@ function passarAno(){
             mortePersonagem();
         }
     }
-    if (morte == false){
+    if (morte == false && idadeReal > 14){
         acontecimentoHorizonte();
     }
     console.log(idadeMaxima);

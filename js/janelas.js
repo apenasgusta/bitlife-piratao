@@ -8,10 +8,10 @@ function trafico(){
     document.getElementById('janela').style.display='none';
     document.getElementById('janela-trafico').innerHTML = `
             <h2>Trafico</h2>
-            <button onclick="traficarCocaina()">Traficar Cocaina R$1000</button>
-            <button onclick="traficarMaconha()">Traficar Maconha R$700</button>
-            <button onclick="traficarMetafetamina()">Traficar Metafetamina R$ 400</button>
-            <button onclick="traficarCimeGripe()">Traficar CimeGripe R$ 100</button>
+            <button onclick="traficarCocaina()">Traficar Cocaina R$5000</button>
+            <button onclick="traficarMaconha()">Traficar Maconha R$3500</button>
+            <button onclick="traficarMetafetamina()">Traficar Metafetamina R$1000</button>
+            <button onclick="traficarCimeGripe()">Traficar CimeGripe R$500</button>
             <button onclick="fecharJanelaTrafico()">Fechar</button> `
 }
 function fecharJanelaTrafico(){
@@ -20,7 +20,7 @@ function fecharJanelaTrafico(){
 }
 function traficarCocaina(){
     let eventosAleatoriosTrafico = parseInt(Math.random() * 3 + 1);
-    adicionarDinheiro(1000);
+    adicionarDinheiro(5000);
     if (eventosAleatoriosTrafico == 1 || eventosAleatoriosTrafico == 3 || eventosAleatoriosTrafico == 5 || eventosAleatoriosTrafico == 7 ){
         mortePersonagem();
         acontecimentoFun('Morreu porque tomou 2 tiros de escopeta do Calabreso');
@@ -28,7 +28,7 @@ function traficarCocaina(){
 }
 function traficarMaconha(){
     let eventosAleatoriosTrafico = parseInt(Math.random() * 10 + 1);
-    adicionarDinheiro(700);
+    adicionarDinheiro(3500);
     if (eventosAleatoriosTrafico == 1 || eventosAleatoriosTrafico == 3 || eventosAleatoriosTrafico == 5){
         mortePersonagem();
         acontecimentoFun('Morreu porque rebolou errado pros crias');
@@ -36,7 +36,7 @@ function traficarMaconha(){
 }  
 function traficarMetafetamina(){
     let eventosAleatoriosTrafico = parseInt(Math.random() * 10 + 1);
-    adicionarDinheiro(500);
+    adicionarDinheiro(1000);
     if (eventosAleatoriosTrafico == 1 || eventosAleatoriosTrafico == 3){
         mortePersonagem();
         acontecimentoFun('Morreu porque Trevor Philips interviu nos negocios')
@@ -45,7 +45,7 @@ function traficarMetafetamina(){
 }
 function traficarCimeGripe(){
     let eventosAleatoriosTrafico = parseInt(Math.random() * 10 + 1);
-    adicionarDinheiro(100);
+    adicionarDinheiro(500);
     if (eventosAleatoriosTrafico == 1){
         mortePersonagem();
         acontecimentoFun('Morreu pq foi lerdão');
@@ -101,4 +101,18 @@ function gari(){
 function fecharJanelaGari(){
     document.getElementById('janela').style.display='block';
     document.getElementById('janela-gari').style.display='none';
+}
+function trabalharLixo(){
+    acontecimentoFun('Voce trabalhou e ganhou 10R$')
+}
+function roubarChefeGari(){
+    let rouboChefeGariNum = parseInt(Math.random() * 10 + 1);
+    console.log(rouboChefeGariNum);
+    if (rouboChefeGariNum == 1){
+        causa = 'morreu mamando';
+        mortePersonagem();
+    } else {
+        acontecimentoFun('voce roubou a porshe e vendeu no mercadinho ao lado');
+        adicionarDinheiro(100000);
+    }
 }
