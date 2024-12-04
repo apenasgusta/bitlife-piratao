@@ -1,4 +1,5 @@
 //arthur é gay
+//gustavo é gay
 
 let idadeBruta = document.getElementById('idade').textContent;
 let idadeReal = idadeBruta.split(':')[1];
