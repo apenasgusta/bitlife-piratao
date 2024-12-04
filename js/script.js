@@ -27,6 +27,13 @@ function adicionarDinheiro(valor){
     document.getElementById('dinheiroJanela').innerHTML = `<h2 id = "dinheiroJanela">Dinheiro: ${dinheiroTotal}</h2>`;
 }
 
+function removerDinheiro(valor){
+    dinheiroTotal -= valor;
+    dinheiroElemento = document.getElementById("dinheiro");
+    dinheiroElemento.textContent = `Dinheiro: R$ ${dinheiroTotal}`;
+    document.getElementById('dinheiroJanela').innerHTML = `<h2 id = "dinheiroJanela">Dinheiro: ${dinheiroTotal}</h2>`;
+}
+
 //function para adcionar dinheiro
 
 
@@ -74,6 +81,7 @@ function nome(){
 //perguntar nome (nao repetir)
 
 function passarAno(){
+    let morte = false;
     //let idadeMaxima = parseInt(Math.random() * 3 + 1); para gerar uma idade aleatoria de morte a cada click = tire o da linha 4
     idadeReal++;
     document.getElementById('idade').textContent = `Idade: ${idadeReal}`;
@@ -89,17 +97,24 @@ function passarAno(){
     }
     if(idadeMaxima == 1){
         if(idadeReal == 60){
+            morte = true;
             mortePersonagem();
         }
     } else if (idadeMaxima == 2){
         if(idadeReal == 70){
+            morte = true;
             mortePersonagem();
         }
     } else if (idadeMaxima == 3){
         if(idadeReal == 80){
+            morte = true;
             mortePersonagem();
         }
     }
+    if (morte == false){
+        acontecimentoHorizonte();
+    }
+    console.log(idadeMaxima);
     
 }//passar ano
 
