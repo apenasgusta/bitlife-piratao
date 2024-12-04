@@ -110,14 +110,18 @@ function trampar(){
     }
     document.getElementById('janela').style.display='block';
 }
-
-//abrir janela trabalho
-
 function fecharTrabalho () {
     document.getElementById('janela').style.display='none'
 }
 
-//fechar janela trabalho
+function outros(){
+    document.getElementById('janela-outros').style.display='inline';
+}
+function fecharOutros(){
+    document.getElementById('janela-outros').style.display='none';
+}
+
+
 
 function limparChat(){
     acontecimento.innerHTML = `<h2 id="horizonte-eventos"></h2>`

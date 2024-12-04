@@ -1,8 +1,12 @@
+// JANELAS TRAFICO -----------------------------------------------
+// JANELAS TRAFICO -----------------------------------------------
+// JANELAS TRAFICO -----------------------------------------------
+
 function trafico(){
     document.getElementById('janela-trafico').style.display='block';
-    let alterarTextoTrafico;
+    //let alterarTextoTrafico;
     document.getElementById('janela').style.display='none';
-    alterarTextoTrafico = document.getElementById('janela-trafico').innerHTML = `
+    document.getElementById('janela-trafico').innerHTML = `
             <h2>Trafico</h2>
             <button onclick="traficarCocaina()">Traficar Cocaina R$1000</button>
             <button onclick="traficarMaconha()">Traficar Maconha R$700</button>
@@ -24,6 +28,7 @@ function traficarCocaina(){
 }
 function traficarMaconha(){
     let eventosAleatoriosTrafico = parseInt(Math.random() * 10 + 1);
+    adicionarDinheiro(700);
     if (eventosAleatoriosTrafico == 1 || eventosAleatoriosTrafico == 3 || eventosAleatoriosTrafico == 5){
         mortePersonagem();
         acontecimentoFun('Morreu porque rebolou errado pros crias');
@@ -31,6 +36,7 @@ function traficarMaconha(){
 }  
 function traficarMetafetamina(){
     let eventosAleatoriosTrafico = parseInt(Math.random() * 10 + 1);
+    adicionarDinheiro(500);
     if (eventosAleatoriosTrafico == 1 || eventosAleatoriosTrafico == 3){
         mortePersonagem();
         acontecimentoFun('Morreu porque Trevor Philips interviu nos negocios')
@@ -39,9 +45,60 @@ function traficarMetafetamina(){
 }
 function traficarCimeGripe(){
     let eventosAleatoriosTrafico = parseInt(Math.random() * 10 + 1);
+    adicionarDinheiro(100);
     if (eventosAleatoriosTrafico == 1){
         mortePersonagem();
         acontecimentoFun('Morreu pq foi lerdão');
     }
     
+}
+
+//JANELAS MENOR APRENDIZ----------------------------------------------------
+//JANELAS MENOR APRENDIZ----------------------------------------------------
+//JANELAS MENOR APRENDIZ----------------------------------------------------
+
+
+function menorAprendiz(){
+    document.getElementById('janela-menorAprendiz').style.display='block';
+    document.getElementById('janela').style.display='none';
+    document.getElementById('janela-menorAprendiz').innerHTML = `
+            <h2>Menor Aprendiz</h2>
+            <button onclick="trabalharUmaHora()">Trabalhar 1H</button>
+            <button onclick="trabalharDuasHoras()">Trabalhar 2h</button>
+            <button onclick="trabalharChina()">Traficar igual na China (18h)</button>
+            <button onclick="fecharJanelaMenor()">Fechar</button>`
+}
+function fecharJanelaMenor(){
+    document.getElementById('janela').style.display='block';
+    document.getElementById('janela-menorAprendiz').style.display='none';
+}
+function trabalharUmaHora(){
+    adicionarDinheiro(100);
+    acontecimentoFun('Voce deu para o chefe e ganhou R$100');
+}
+function trabalharDuasHoras(){
+    adicionarDinheiro(300);
+    acontecimentoFun('Voce mamou o chefe e a esposa e ganhou R$300');
+}
+function trabalharChina(){
+    adicionarDinheiro(10);
+    acontecimentoFun('Voce foi escravizado e ganhou R$10');
+}
+
+//JANELA GARI ---------------------------------------------------
+//JANELA GARI ---------------------------------------------------
+//JANELA GARI ---------------------------------------------------
+
+function gari(){
+    document.getElementById('janela-gari').style.display='block';
+    document.getElementById('janela').style.display='none';
+    document.getElementById('janela-gari').innerHTML = `
+            <h2>Lixão</h2>
+            <button onclick="trabalharLixo()">Trabalhar</button>
+            <button onclick="roubarChefeGari()">Tentar roubar o chefe</button>
+            <button onclick="fecharJanelaGari()">Fechar</button>`
+}
+function fecharJanelaGari(){
+    document.getElementById('janela').style.display='block';
+    document.getElementById('janela-gari').style.display='none';
 }
