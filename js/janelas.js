@@ -104,15 +104,53 @@ function fecharJanelaGari(){
 }
 function trabalharLixo(){
     acontecimentoFun('Voce trabalhou e ganhou 10R$')
+    adicionarDinheiro(10);
 }
 function roubarChefeGari(){
     let rouboChefeGariNum = parseInt(Math.random() * 10 + 1);
     console.log(rouboChefeGariNum);
     if (rouboChefeGariNum == 1){
-        causa = 'morreu mamando';
         mortePersonagem();
     } else {
         acontecimentoFun('voce roubou a porshe e vendeu no mercadinho ao lado');
         adicionarDinheiro(100000);
+    }
+}
+
+//JANELA ONLYFANS -----------------------------------------------------------
+//JANELA ONLYFANS -----------------------------------------------------------
+//JANELA ONLYFANS -----------------------------------------------------------
+
+function onlyFans(){
+    document.getElementById('janela-garotoOnly').style.display='block';
+    document.getElementById('janela').style.display='none';
+    document.getElementById('janela-garotoOnly').innerHTML = `
+            <h2>Only Fans</h2>
+            <button onclick="fazerPubli()">Publicidade</button>
+            <button onclick="postarNudes()">Publicar Conteudo</button>
+            <button onclick="fecharJanelaOnly()">Fechar</button>`;
+}
+function fecharJanelaOnly(){
+    document.getElementById('janela').style.display='block';
+    document.getElementById('janela-garotoOnly').style.display='none';
+}
+let nivelFamosoOnly = 0;
+function fazerPubli(){
+    nivelFamosoOnly += 1
+    if (nivelFamosoOnly >= 10){
+        nivelFamosoOnly = 10;
+        return nivelFamosoOnly--;
+    }
+}
+function postarNudes(){
+    if(nivelFamosoOnly >= 3){
+        acontecimentoFun('Voce ganhou R$100');
+        adicionarDinheiro(100);
+    } else if(nivelFamosoOnly > 3 && nivelFamosoOnly < 6){
+        acontecimentoFun('Voce ganhou R$300');
+        adicionarDinheiro(300);
+    } else if (nivelFamosoOnly >= 6){
+        acontecimentoFun('Voce ganhou R$1000');
+        adicionarDinheiro(1000);
     }
 }
