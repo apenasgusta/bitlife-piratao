@@ -53,7 +53,9 @@ function mortePersonagem(){
     document.getElementById('botaomeupau').style.display='inline';
     document.getElementById('janela').style.display='none';
     document.getElementById('janela-trafico').style.display='none';
-    acontecimentoFun(causa.textContent + 'VOCE MORREU! Digite seu nome novamente e continue o jogo');
+    document.getElementById('janela-outros').style.display='none';
+    document.getElementById('janela-gari').style.display='none';
+    acontecimentoFun('VOCE MORREU! Digite seu nome novamente e continue o jogo');
 }
 
 let textoInserido;
