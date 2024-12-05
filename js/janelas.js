@@ -136,13 +136,13 @@ function fecharJanelaOnly(){
 }
 let nivelFamosoOnly = 0;
 function fazerPubli(){
-    nivelFamosoOnly += 1
-    if (nivelFamosoOnly >= 10){
-        nivelFamosoOnly = 10;
-        return nivelFamosoOnly--;
+    nivelFamosoOnly += 1;
+    if (nivelFamosoOnly > 10){
+         return nivelFamosoOnly--;
     }
+    console.log(nivelFamosoOnly);
 }
-function postarNudes(){
+function postarNudes(){ //bug n ta funcionando
     if(nivelFamosoOnly >= 3){
         acontecimentoFun('Voce ganhou R$100');
         adicionarDinheiro(100);
