@@ -140,7 +140,8 @@ function fazerPubli(){
     if (nivelFamosoOnly > 10){
          return nivelFamosoOnly--;
     }
-    console.log(nivelFamosoOnly);
+    return nivelFamosoOnly;
+    console.log(nivelFamosoOnlyReal);
 }
 function postarNudes(){ //bug n ta funcionando
     if(nivelFamosoOnly >= 3){
@@ -152,5 +153,8 @@ function postarNudes(){ //bug n ta funcionando
     } else if (nivelFamosoOnly >= 6){
         acontecimentoFun('Voce ganhou R$1000');
         adicionarDinheiro(1000);
+    } else {
+        acontecimentoFun('Voce Ganhou R$10')
+        adicionarDinheiro(10);
     }
 }
