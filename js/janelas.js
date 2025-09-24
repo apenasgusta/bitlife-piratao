@@ -120,13 +120,13 @@ function roubarChefeGari(){
 //JANELA ONLYFANS -----------------------------------------------------------
 //JANELA ONLYFANS -----------------------------------------------------------
 //JANELA ONLYFANS -----------------------------------------------------------
-
+let nivelDeFamaOnlyFans = 0;
 function onlyFans(){
     document.getElementById('janela-garotoOnly').style.display='block';
     document.getElementById('janela').style.display='none';
     document.getElementById('janela-garotoOnly').innerHTML = `
             <h2>Only Fans</h2>
-            <h3 id = "dinheiroJanela">Dinheiro: </h3>
+            <h3 id = "dinheiroJanela">Fama: ${nivelDeFamaOnlyFans}</h3>
             <button onclick="fazerPubli()">Publicidade</button>
             <button onclick="postarNudes()">Publicar Conteudo</button>
             <button onclick="fecharJanelaOnly()">Fechar</button>`;
@@ -134,4 +134,19 @@ function onlyFans(){
 function fecharJanelaOnly(){
     document.getElementById('janela').style.display='block';
     document.getElementById('janela-garotoOnly').style.display='none';
+}
+function postarNudes(){
+    nivelDeFamaOnlyFans++;
+    adicionarDinheiro(100);
+    acontecimentoFun('voce postou a xereca depilada e ganhou R$100,00')
+    return nivelDeFamaOnlyFans;
+}
+function fazerPubli(){
+    if(nivelDeFamaOnlyFans > 10){
+        adicionarDinheiro(1000);
+        acontecimentoFun('voce fez publi pro gaules e ganhou R$1000,00')
+    }
+    else {
+        acontecimentoFun('Voce não tem fama suficiente')
+    }
 }
