@@ -1,5 +1,5 @@
 function acontecimentoHorizonte(){
-    let eventoAleatorioHorizonte = parseInt(Math.random() * 10 + 1);
+    let eventoAleatorioHorizonte = parseInt(Math.random() * 50 + 1);
     if (eventoAleatorioHorizonte == 1){
         document.getElementById('horizonte-eventos').innerHTML = `<h2 id="horizonte-eventos">Você tem ${idadeReal} anos</h2>
         <h2 id="horizonte-eventos">Você esbarrou em uma velha e ela te ofereceu um progama!</h2>` // digita o acontecimento

@@ -126,6 +126,7 @@ function onlyFans(){
     document.getElementById('janela').style.display='none';
     document.getElementById('janela-garotoOnly').innerHTML = `
             <h2>Only Fans</h2>
+            <h3 id = "dinheiroJanela">Dinheiro: </h3>
             <button onclick="fazerPubli()">Publicidade</button>
             <button onclick="postarNudes()">Publicar Conteudo</button>
             <button onclick="fecharJanelaOnly()">Fechar</button>`;
@@ -133,28 +134,4 @@ function onlyFans(){
 function fecharJanelaOnly(){
     document.getElementById('janela').style.display='block';
     document.getElementById('janela-garotoOnly').style.display='none';
-}
-let nivelFamosoOnly = 0;
-function fazerPubli(){
-    nivelFamosoOnly += 1;
-    if (nivelFamosoOnly > 10){
-         return nivelFamosoOnly--;
-    }
-    return nivelFamosoOnly;
-    console.log(nivelFamosoOnlyReal);
-}
-function postarNudes(){ //bug n ta funcionando
-    if(nivelFamosoOnly >= 3){
-        acontecimentoFun('Voce ganhou R$100');
-        adicionarDinheiro(100);
-    } else if(nivelFamosoOnly > 3 && nivelFamosoOnly < 6){
-        acontecimentoFun('Voce ganhou R$300');
-        adicionarDinheiro(300);
-    } else if (nivelFamosoOnly >= 6){
-        acontecimentoFun('Voce ganhou R$1000');
-        adicionarDinheiro(1000);
-    } else {
-        acontecimentoFun('Voce Ganhou R$10')
-        adicionarDinheiro(10);
-    }
 }
